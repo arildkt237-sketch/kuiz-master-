@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kuis Master - game edukasi interaktif dengan 100 soal.">
+  <title>Kuis Master | Game Edukasi</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Kuis Master"><span class="brand-mark">K</span><span>KUIS<span class="brand-accent">MASTER</span></span></a>
+      <div class="top-tag">GAME EDUKASI</div>
+    </header>
+
+    <section id="home-screen" class="screen home-screen">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> ASAH OTAK • TAMBAH WAWASAN</div>
+        <h1>Uji wawasanmu.<br><span>Jadilah Master!</span></h1>
+        <p class="hero-desc">Tantang dirimu dengan pertanyaan dari berbagai bidang. Kumpulkan poin, kejar skor tertinggi, dan buktikan kemampuanmu.</p>
+        <div class="feature-row">
+          <div class="feature"><strong>100+</strong><small>PERTANYAAN</small></div>
+          <div class="feature-divider"></div>
+          <div class="feature"><strong>10</strong><small>KATEGORI</small></div>
+          <div class="feature-divider"></div>
+          <div class="feature"><strong>15 dtk</strong><small>PER SOAL</small></div>
+        </div>
+        <button id="start-btn" class="btn btn-primary">Mulai bermain <span>→</span></button>
+        <button id="rules-open" class="text-btn">Baca aturan permainan</button>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="quiz-card">
+          <div class="quiz-card-top"><span>CHALLENGE MODE</span><span class="live-dot"></span></div>
+          <div class="question-symbol">?</div>
+          <div class="quiz-card-line"></div><div class="quiz-card-line short"></div>
+          <div class="fake-options"><i></i><i></i><i></i></div>
+          <div class="card-score"><span>YOUR KNOWLEDGE</span><b>+100 XP</b></div>
+        </div>
+        <div class="float-chip chip-star">✦ <b>SMART</b></div>
+        <div class="float-chip chip-bolt">⚡</div>
+        <div class="float-chip chip-brain">🧠</div>
+      </div>
+    </section>
+
+    <section id="game-screen" class="screen game-screen hidden">
+      <div class="game-heading"><div><div class="eyebrow">SEDANG BERMAIN</div><h2>Jawab dengan tepat!</h2></div><button id="quit-btn" class="quit-btn">Keluar ×</button></div>
+      <div class="stats-grid">
+        <div class="stat-card"><span>PERTANYAAN</span><strong id="question-count">1 / 10</strong></div>
+        <div class="stat-card"><span>SKOR</span><strong id="score">0</strong></div>
+        <div class="stat-card timer-card"><span>WAKTU</span><strong id="timer">15</strong></div>
+      </div>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+      <div class="question-panel">
+        <div class="question-meta"><span id="category-pill" class="category-pill">MATEMATIKA</span><span id="question-number">PERTANYAAN 01</span></div>
+        <h3 id="question-text">Pertanyaan akan muncul di sini.</h3>
+        <div id="answer-list" class="answer-list"></div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+        <button id="next-btn" class="btn btn-primary next-btn" disabled>Soal berikutnya <span>→</span></button>
+      </div>
+      <p class="game-footnote">Pilih satu jawaban. Kamu mendapat 10 poin untuk setiap jawaban benar.</p>
+    </section>
+
+    <section id="result-screen" class="screen result-screen hidden">
+      <div class="result-icon">🏆</div><div class="eyebrow">SESI SELESAI</div>
+      <h2 id="result-title">Kerja bagus!</h2><p id="result-subtitle">Inilah hasil permainanmu.</p>
+      <div class="result-score"><span>SKOR AKHIR</span><strong id="final-score">0</strong><small>POIN</small></div>
+      <div class="result-stats"><div><strong id="correct-count">0</strong><span>BENAR</span></div><div><strong id="wrong-count">0</strong><span>SALAH</span></div><div><strong id="accuracy">0%</strong><span>AKURASI</span></div></div>
+      <div class="result-actions"><button id="play-again-btn" class="btn btn-primary">Main lagi <span>↻</span></button><button id="home-btn" class="btn btn-secondary">Kembali ke awal</button></div>
+    </section>
+    <footer>© 2026 KUIS MASTER <span>•</span> BELAJAR JADI LEBIH SERU</footer>
+  </main>
+  <dialog id="rules-dialog" class="rules-dialog">
+    <button id="rules-close" class="dialog-close" aria-label="Tutup">×</button>
+    <div class="eyebrow">SEBELUM BERMAIN</div><h2>Aturan permainan</h2>
+    <ul><li>Satu sesi terdiri dari <b>10 soal acak</b> dari bank soal yang tersedia.</li><li>Setiap soal memiliki waktu <b>15 detik</b>.</li><li>Jawaban benar mendapatkan <b>10 poin</b>.</li><li>Jawaban salah atau waktu habis tidak mendapat poin.</li><li>Pilih satu jawaban. Setelah menjawab, tekan tombol soal berikutnya.</li><li>Di akhir permainan, skor dan akurasimu akan ditampilkan.</li></ul>
+    <button id="rules-ok" class="btn btn-primary">Saya mengerti</button>
+  </dialog>
+  <script src="js/script.js"></script>
+</body>
+</html>
